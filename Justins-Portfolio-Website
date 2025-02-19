@@ -1,0 +1,143 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Hawkins Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #006400;
+            --secondary-color: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .section {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--secondary-color);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .interactive-slot {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Justin Hawkins Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="section" id="about">
+        <h3>About Me</h3>
+        <p>I am a curious and determined individual who enjoys tackling real-world problems with technology. My work primarily involves data analysis, programming, and building creative solutions using Python, SQL, and visualization tools. Whether it’s generating insights from raw data or building engaging projects, I love exploring new concepts and continuously improving my skills.</p>
+    </section>
+
+    <section class="section" id="projects">
+        <h3>Projects</h3>
+
+        <div class="interactive-slot">
+            <h4>Data Generator Project (MSU Burgess Institute of Science)</h4>
+            <p>For this project, I built a simple yet effective data generator to create mock datasets for testing and analysis. This was particularly useful for simulating real-world data before working with actual company datasets.</p>
+            <p>The script randomly generates names, ages, and scores, making it great for testing database operations and visualizations.</p>
+            <img src="URL_TO_YOUR_DATA_GENERATOR_IMAGE" alt="Data Generator Screenshot" style="width: 100%; max-width: 500px; border-radius: 8px; margin-top: 10px;">
+            <pre>
+import random
+import pandas as pd
+
+names = ["Stephen", "Mark", "Ben", "Abby", "Emma"]
+data = [{"Name": random.choice(names), "Age": random.randint(18, 40), "Score": random.randint(50, 100)} for _ in range(10)]
+
+df = pd.DataFrame(data)
+print(df)
+            </pre>
+            <p>This script helped me learn how to generate structured data efficiently. I used Python’s random module and Pandas to store the generated values in a structured format, making it easy to analyze and manipulate later.</p>
+        </div>
+
+        <div class="interactive-slot">
+            <h4>Data Visualization Project</h4>
+            <p>I created this project to explore how visual representations can help interpret data more effectively. Using Matplotlib, I built a simple bar chart that visualizes randomly generated scores.</p>
+            <img src="URL_TO_YOUR_DATA_VISUALIZATION_IMAGE" alt="Data Visualization Screenshot" style="width: 100%; max-width: 500px; border-radius: 8px; margin-top: 10px;">
+            <pre>
+import random
+import matplotlib.pyplot as plt
+
+names = ["David", "Antonio", "Nolan", "Ashton", "Bethany"]
+scores = [random.randint(50, 100) for _ in names]
+
+plt.bar(names, scores, color='green')
+plt.xlabel("Names")
+plt.ylabel("Scores")
+plt.title("Randomly Generated Scores")
+plt.show()
+            </pre>
+            <p>With this project, I explored Matplotlib’s ability to quickly generate insightful graphs. By randomly assigning scores to names, I was able to practice formatting and labeling charts, which is a crucial skill in data storytelling.</p>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h3>Contact Me</h3>
+        <p>Email: <a href="mailto:Jhawkinses@gmail.com">Jhawkinses@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/justin-hawkins/" target="_blank">linkedin.com/in/justin-hawkins</a></p>
+    </section>
+
+    <section class="section" id="gogreengowhite" style="text-align:center; font-size:1.5rem; font-weight:bold; color:#006400; margin-top:2rem;">
+        <p>Go Green! Go White!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Justin Hawkins. All rights reserved.</p>
+    </footer>
+</body>
+</html>
